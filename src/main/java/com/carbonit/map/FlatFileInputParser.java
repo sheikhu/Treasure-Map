@@ -40,12 +40,11 @@ public class FlatFileInputParser implements InputParser {
                 if(line.startsWith("#"))
                     continue;
                 String[] splits = line.trim().split("-");
-                String caseType = splits[0];
+                String caseType = splits[0].trim();
 
                 switch (caseType) {
                     case "C":
                         map = mapParser.parse(line);
-                        
                         break;
                     case "M":
                         tiles.add(mountainParser.parse(line));
@@ -64,8 +63,8 @@ public class FlatFileInputParser implements InputParser {
                         break;
                     default:
                         Plain p = new Plain(
-                                new Position(Integer.parseInt(splits[1]),
-                                Integer.parseInt(splits[2])));
+                                new Position(Integer.parseInt(splits[1].trim()),
+                                Integer.parseInt(splits[2].trim())));
                         p.setTileListener(new DefaultTileListener());
                         tiles.add(p);
                         break;

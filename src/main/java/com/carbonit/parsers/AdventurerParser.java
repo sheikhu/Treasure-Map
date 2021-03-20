@@ -17,11 +17,11 @@ public class AdventurerParser implements LineParser<Adventurer> {
 
 
         return new SimpleAdventurer(
-                splits[1],
-                new Position(Integer.parseInt(splits[2]),
-                Integer.parseInt(splits[3])),
-                Compass.getOrientation(splits[4]),
-                Arrays.asList(splits[5].split(""))
+                splits[1].trim(),
+                new Position(Integer.parseInt(splits[2].trim()),
+                Integer.parseInt(splits[3].trim())),
+                Compass.getOrientation(splits[4].trim()),
+                Arrays.asList(splits[5].trim().split(""))
         );
 
     }

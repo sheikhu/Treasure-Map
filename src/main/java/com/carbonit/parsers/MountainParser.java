@@ -13,8 +13,8 @@ public class MountainParser implements LineParser<Mountain> {
 
 
         return new Mountain(
-                new Position(Integer.parseInt(splits[1]),
-                Integer.parseInt(splits[2])
+                new Position(Integer.parseInt(splits[1].trim()),
+                Integer.parseInt(splits[2].trim())
                 )
         );
 

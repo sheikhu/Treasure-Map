@@ -13,8 +13,8 @@ public class MapParser implements LineParser<Map> {
 
 
         return new TreasureMap(
-                Integer.parseInt(splits[1]),
-                Integer.parseInt(splits[2])
+                Integer.parseInt(splits[1].trim()),
+                Integer.parseInt(splits[2].trim())
         );
 
     }

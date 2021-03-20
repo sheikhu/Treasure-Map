@@ -13,9 +13,9 @@ public class TreasureParser implements LineParser<Treasure> {
 
 
         return new Treasure(
-                new Position(Integer.parseInt(splits[1]),
-                Integer.parseInt(splits[2])),
-                Integer.parseInt(splits[3])
+                new Position(Integer.parseInt(splits[1].trim()),
+                Integer.parseInt(splits[2].trim())),
+                Integer.parseInt(splits[3].trim())
                 );
 
     }
