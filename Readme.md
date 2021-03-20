@@ -17,7 +17,7 @@ mvn test
 
 # Run executable
 ```bash
-java -jar target/treasure-1.0.jar 
+java -jar target/treasure-1.0.jar <input_file> <outptut_file>
 ```
 
 
